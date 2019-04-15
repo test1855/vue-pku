@@ -1,0 +1,267 @@
+# vue-pku
+> vue-pku is a Web UI Toolkit for vue.js
+
+vue-pku is an ui components library base on vuejs and awsome font.
+
+[Preview](http://don-ui.jiangyu.me)｜[中文文档](http://don-ui.jiangyu.me)
+
+## Installation
+### NPM (Recommended)
+```bash
+$ npm install vue-pku
+```
+
+## Usage
+```bash
+import Vue from 'vue'
+import pkue from 'vue-pku'
+
+Vue.use(pkue)
+```
+
+# Version
+- 0.10.3 beta 4/13/2018
+	- update `<pku-textarea>`
+		- 增加了对属性 `message` 的监听
+	- update `<pku-table>`
+		- 修改了表格默认的显示行数
+		- 增加了切换页面数据，checkbox 按钮的显示问题
+- 0.10.2 beta 4/4/2018
+    - update `<pku-dialog>`
+        - 关闭该组件后取消 SLOT 中复选框的选中状态
+    - update `<pku-pagination>`
+        - 修改导航栏输入框的样式
+    - update `<pku-table>`
+        - 修改表格中全选框的显示方式
+        - 修改清除选中方法
+- 0.10.1 beta 4/3/2018
+    - add `<pku-edit>`
+        - 增加编辑组件
+    - add `<pku-tooltip>`
+        - 增加信息提示组件
+    - add `<pku-tab>`
+        - 增加切换内容组件
+    - add `<pku-data-picker>`
+        - 增加时间选择器组件
+    - add `<pku-rate>`
+        - 增加评分组件
+    - update `<pku-dialog>`
+        - 修改组件的默认宽度
+    - update `<pku-button>`
+        - 修改默认宽度
+        - 点击时返回监听结果
+    - update `<pku-dropdown>`
+        - 修改默认宽度
+        - 添加下拉按钮组的分割线
+    - update `<pku-form-item>`
+        - 修改组件的默认字体 Weight
+    - update `<pku-input>`
+        - 监听 input 的输入状态
+        - 取消默认值的类型
+    - update `<pku-messagebox>`
+        - 点击事件可用在 `$alert` 事件中
+    - update `<pku-select>`
+        - 增加 props 属性 html，开启后可以在下拉列表中对 html 代码进行解析
+        - 添加 reset 方法，可以初始化显示的内容
+        - 修改了选择框的样式
+    - update `<pku-switch>`
+        - 添加 disabled 属性
+        - 修改 props 属性 value 为 message，并设置默认类型为 String
+    - update `<pku-table>`
+        - 增加 props 属性 scroll，开启后表格可以在 X 轴开启滚动条
+        - 增加当前页的全选功能
+        - 增加 props 属性 [resize, cssWidth]，可以对表格的每一栏固定宽度
+    - update `<pku-textarea>`
+        - 增加输入事件的监听事件
+    - update `<pku-radio>`
+        - 为圆点增加选中事件
+    - update `<pku-pagination>`
+        - 页面跳转时，向上级组件发起清空当前选中事件的命令
+- 0.9.3 beta 3/7/2018
+    - update `<pku-input>`
+        - 添加输入框监听事件
+    - update `<pku-dropdown>`
+        - 修改样式
+- 0.9.2 beta 1/28/2018
+    - update `<pku-switch>`
+        - 修改组件注入 `value` 变量形式
+        - 解决组件传递数据与自身状态改变时传回数据冲突的问题
+- 0.9.1 beta 1/27/2018
+    - update `<pku-dropdown>`
+        - 修复 checkbox 模式下，点击确认后原复选框状态消失的问题
+- 0.9.0 beta 1/27/2018
+    - update `<pku-button>`
+        - 增加 small 的尺寸
+    - update `<pku-cascader>`
+        - `line-height` 设置为可继承
+        - 修改 cascader 中图标的定位类型
+    - update `<pku-header>`
+        - 修改 `z-index` 属性
+    - update `<pku-cascader>`
+        - `line-height` 设置为可继承
+        - 修改 cascader 中图标的定位类型
+    - update `<pku-switch>`
+        - 取消监听
+    - update `<pku-table>`
+        - 增加无数据时的系统提示
+        - 用 `<pku-dropdown>` 组件替换 `<pku-cascader>` 
+        - 修改表格导航的展示
+    - add `<pku-dropdown>`
+        - 增加按钮组
+- 0.8.7 beta 1/16/2018
+    - update `<pku-cascader>`
+        - 解决了级联选择器子组件在继承宽度时的距离问题
+        - 修改了级联选择器的高度
+- 0.8.6 beta 1/16/2018
+    - update `<pku-header>`
+        - 处理 safari 浏览器不兼容的问题
+- 0.8.5 beta 1/16/2018
+    - add compontent
+        - `<pku-tag>`
+    - update compontent
+        - `<pku-header>`
+            - 添加欢迎语
+            - 增加按钮组的回调方法
+            - 固定问题组标签的长度及显示方式
+- 0.8.4 beta 1/16/2018
+    - add compontent
+        - `<pku-header>`
+    - update compontent
+        - `<pku-input>`
+            - 取消最小宽度限制，改为继承父级元素
+            - 增加 `border` 变量，可隐藏输入框边框 
+        - `<pku-select>`
+            - 取消最小宽度限制，改为继承父级元素
+            - 增加 `border` 变量，可隐藏选择框边框
+            - 选择框可做多级按钮使用
+- 0.8.3 beta 1/16/2018
+    - update readme.md
+- 0.8.2 beta 1/16/2018
+    - rename `pkue` to `don-ui`
+- 0.8.1 beta 1/15/2018
+    - update compontent
+        - `<pku-table>`
+            - 使用级联选择器替换表格的每行操作按钮
+        - `<pku-select>`
+            - 下拉选择器添加常量提示标签
+        - `<pku-input>`
+            - 修改输入框阴影属性
+        - `<pku-cascader-item>`
+            - 去除级联选择器最小宽度限制
+        - `<pku-cascader>`
+            - 去除级联选择器最小宽度限制
+            - 调整内边距
+- 0.8.0 beta 1/15/2018
+    - add compontent
+        - `<pku-radio>`
+        - `<pku-cascader>`
+    - update compontent
+        - `<pku-input>`
+            - 可以通过注册 `ref` 获取输入框的内容
+        - `<pku-select>`
+            - 可以通过注册 `ref` 获取选择框的内容
+        - `<pku-textarea>`
+            - 可以通过注册 `ref` 获取文本框的内容        
+- 0.7.8 beta 1/12/2018
+    - update compontent
+         - `<pku-input>`
+            - 监听输入值
+- 0.7.4 beta 1/12/2018
+    - update compontent
+        - `<pku-input>`, `<pku-select>`, `<pku-textarea>`
+            - 取消 rem 单位
+            - 设置默认 `width` 为 `100%`
+        - `<pku-dialog>`
+            - 增加滚动条
+- 0.7.0 beta 1/11/2018
+    - add compontent
+        - `<pku-input>`
+            - 模拟系统的单行输入框
+            - 提供键入操作时的回调方法
+        - `<pku-textarea>`
+            - 模拟系统的多行输入框
+            - **缺少** 键入操作的回调方法
+        - `<pku-form>`
+            - 模拟系统的表格组件
+            - 提供 inline 与 block 两种布局
+        - `<pku-form-item>`
+            - `<pku-form>` 组件的每行
+            - 可以插入任意 `html` 代码或者 `<pku-*>` 组件
+    - update compontent
+        - `<pku-dialog>`
+            - 解决该组件在未传入 checkbox 变量时的 **warning** 警告
+- 0.6.4 beta 1/10/2018
+    - update compontent
+        - `<pku-messagebox>` 中 `<pku-button>` 的 `value` 不能自定义，通过将 `<pku-button>` 换成原生 `<button>` 解决
+        - `<pku-table>`，修改了 `click` 回调时间发生后，`checkbox` 状态变量丢失的情况
+- 0.6.3 beta 1/9/2018
+    - update compontent
+        - `<pku-notice>`
+            - 去除 `autoclose` 参数
+            - 添加 ['success', 'error', 'info', 'warning'] 四种提示类型
+            - 多个 Notice 会以出现的先后顺序在右侧从上至下排列
+            - 多个 Notice 存在时，关闭任意 Notice，其底下 Notice 会向上移动
+            - 在 Element UI 源码基础上修改得到
+        - `<pku-messagebox>`
+            - 在 `<pku-notice>` 源码基础上修改得到
+            - 更改需要设置的参数和格式
+            - 添加了关闭、确认事件的回调函数
+            - `this.$text` 打开后能自动获取焦点，设置输入框的默认值，确认事件时能返回输入框的数据
+- 0.6.2 beta 1/8/2018
+    - update compontent
+        - `<pku-notice>`
+            - 每次调用 `this.$notice` 时会额外产生全新的 dom 节点，并且关闭 `notice` 时，节点的高度会自适应调整
+- 0.6.1 beta 1/3/2018
+    - update compontent
+        - `<pku-select>`
+            - the Attribute `list` could be an array of object
+            - add Attribute `importKey`, if `list` is array of object, `importKey` is the showed text in the object, if not, show the item of list
+            - add Attribute `exportKey`, if `list` is array of object, `exportKey` is the callback text in the object, if not, export the item of list
+        - `<pku-checkbox>`
+            -  `<pku-checkbox>` used in the `<pku-table>`, if the renderdata of `<pku-table>` changed, the checked status of `<pku-checkbox>` wouldn't changed. Now fixed!
+- 0.6.0 beta 1/2/2018
+    - 放假休息了3天，我又回来了！
+    - add compontent
+        - loading
+- 0.5.0 beta 12/27/2017
+    - add compontent
+        - notice
+    - update compontent
+        - `<pku-button>`: fix the color of disabled button
+- 0.4.1 beta 12/26/2017
+    - update compontent `<pku-messagebox>`
+        - add $text method, which contains `<textarea>`
+- 0.4.0 beta 12/26/2017
+    - add compontent
+        - dialog
+    - update compontent `<pku-select>`
+        - watch `props.value` from vuex, bind the real time value
+- 0.3.0 beta 12/25/2017
+    - merry christmas! welcome to www.jiangyu.me!
+    - add compontents
+        - table
+        - pagination
+    - update compontent `<pku-button>`
+        - add `callback` Event in unfile type button
+- 0.2.0 beta 12/23/2017
+    - add compontent
+        - select
+    - update: transform length unit from `rem` to `px`
+- 0.1.0 beta 12/22/2017
+    - add compontents
+        - `$alert`
+        - `$confirm`
+- 0.0.3 beta 12/21/2017
+    - add compontents
+        - breadcrumb
+        - button
+        - checkbox
+        - switch
+- 0.0.2 beta 12/20/2017
+    - add compontent
+        - banner
+- 0.0.1 beta 12/19/2017
+    - init project
+
+# License
+Code and documentation copyright 2017 **YJiang**. Code released under the [MIT](www.jiangyu.me) license. Docs released under Creative Commons.
